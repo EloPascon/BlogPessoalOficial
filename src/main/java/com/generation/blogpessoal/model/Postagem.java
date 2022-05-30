@@ -22,7 +22,7 @@ public class Postagem {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY) //AUTO-INCREMENTE
-  private long id;
+  private Long id;
    
 	@NotBlank(message="o atributo titulo é obrigatorio e não pode utilizar espaços em branco")
 	@Size(min=5 , max= 100, message= "o atributo titulo deve conter no minimo 5 eno maximo 100 caracteres")
@@ -35,11 +35,11 @@ public class Postagem {
 	@UpdateTimestamp
   private LocalDateTime data;
 
-public long getId() {
+public Long getId() {
 	return id;
 }
 
-public void setId(long id) {
+public void setId(Long id) {
 	this.id = id;
 }
 
