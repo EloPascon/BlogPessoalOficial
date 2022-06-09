@@ -56,7 +56,8 @@ public class PostagemController {
 	}
 	@PostMapping
 	public ResponseEntity <Postagem> postPostagem (@Valid @RequestBody Postagem postagem){
-		if (postagem.getTema().getId() == null || !temaRepository.existsById(postagem.getTema().getId())){
+		if (postagem.getTema().getId() == null || 
+			!temaRepository.existsById(postagem.getTema().getId())){
 			return ResponseEntity.badRequest().build();
 		}
 		
